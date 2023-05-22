@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "./components/SearchBar";
 import "./index.css";
+import VideoList from "./components/VideoList";
 import SideBar from "./components/SideBar";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <SideBar />
         <div className="main">
           <SearchBar />
+          <VideoList />
         </div>
       </div>
     </>
