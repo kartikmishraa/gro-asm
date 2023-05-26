@@ -1,10 +1,11 @@
 import axios from "axios";
 
-const API_URL = "https://internship-service.onrender.com/videos?page=2";
+const API_URL = "https://internship-service.onrender.com/videos?page=";
 
-export const fetchVideo = async () => {
+export const fetchVideo = async (page) => {
   try {
-    const res = await axios.get(API_URL);
+    const PAGE_URL = API_URL + page;
+    const res = await axios.get(PAGE_URL);
     return res.data;
   } catch (err) {
     console.error("Error fetching video: ", err);
