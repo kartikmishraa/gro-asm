@@ -17,11 +17,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 97%;
+  height: 100%;
   width: 5%;
   padding-top: 20px;
-  background-color: beige;
-  /* have a border radius? */
+  background-color: #282828;
+  color: white;
 }
 
 .main {
