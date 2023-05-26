@@ -2,6 +2,7 @@ import React from "react";
 import { fetchVideo } from "../services/api";
 import { useState, useEffect } from "react";
 import VideoThumbnail from "./VideoThumbnail";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 function VideoList() {
   const [videos, setVideos] = useState(null);
@@ -30,45 +31,9 @@ function VideoList() {
       <hr width="1400px" /> {/* make it responsive*/}
       <div className="video-list">
         {videos ? (
-          <VideoThumbnail postData={videos.data.posts[9]} />
+          videos.data.posts.map((post) => <VideoThumbnail postData={post} />)
         ) : (
-          <h1>nothing to view</h1>
-        )}
-
-        {videos ? (
-          <VideoThumbnail postData={videos.data.posts[0]} />
-        ) : (
-          <h1>nothing to view</h1>
-        )}
-        {videos ? (
-          <VideoThumbnail postData={videos.data.posts[0]} />
-        ) : (
-          <h1>nothing to view</h1>
-        )}
-        {videos ? (
-          <VideoThumbnail postData={videos.data.posts[0]} />
-        ) : (
-          <h1>nothing to view</h1>
-        )}
-        {videos ? (
-          <VideoThumbnail postData={videos.data.posts[0]} />
-        ) : (
-          <h1>nothing to view</h1>
-        )}
-        {videos ? (
-          <VideoThumbnail postData={videos.data.posts[0]} />
-        ) : (
-          <h1>nothing to view</h1>
-        )}
-        {videos ? (
-          <VideoThumbnail postData={videos.data.posts[0]} />
-        ) : (
-          <h1>nothing to view</h1>
-        )}
-        {videos ? (
-          <VideoThumbnail postData={videos.data.posts[0]} />
-        ) : (
-          <h1>nothing to view</h1>
+          <LoadingSpinner />
         )}
       </div>
     </>

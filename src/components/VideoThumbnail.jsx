@@ -3,8 +3,9 @@ import React from "react";
 function VideoThumbnail({ postData }) {
   //   const handle = postData.creator.handle;
   //   const name = postData.creator.name;
+  // const description = postData.submission.description;
   const title = postData.submission.title;
-  const description = postData.submission.description;
+  const profilePic = postData.creator.pic;
   const thumbnail = postData.submission.thumbnail;
   return (
     <>
@@ -17,8 +18,8 @@ function VideoThumbnail({ postData }) {
           // width={250}
         />
         <div className="thumbnail-content">
-          <h2 className="thumbnail-title">{title}</h2>
-          {/* <p className="thumbnail-description">{description}</p> */}
+          <img src={profilePic} alt="profile-pic" className="profile-image" />
+          <h3 className="thumbnail-title">{title}</h3>
         </div>
       </div>
     </>
