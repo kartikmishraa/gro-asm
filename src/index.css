@@ -27,6 +27,8 @@ body {
 .main {
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
   width: 100%;
 }
 
@@ -53,4 +55,29 @@ body {
   align-items: center;
   width: 120px;
   margin-right: 3rem;
+}
+
+.video-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.video-thumbnail {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 15px;
+  /* height: 120px; */
+  width: 250px;
+  margin: 30px;
+  overflow: hidden;
+}
+
+.thumbnail-image {
+  height: 150px;
+  width: 250px;
 }
