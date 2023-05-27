@@ -30,11 +30,6 @@ function VideoList() {
     getVideos();
   }, [page]);
 
-  // For debugging
-  // useEffect(() => {
-  //   console.log(videos);
-  // }, [videos]);
-
   return (
     <>
       <hr width="1400px" /> {/* make it responsive*/}
@@ -45,15 +40,12 @@ function VideoList() {
       </div>
       <div className="video-list">
         {videos ? (
-          videos.data.posts.map((post) => <VideoThumbnail postData={post} />)
+          videos.data.posts.map((post) => (
+            <VideoThumbnail postData={post} key={post.postId} />
+          ))
         ) : (
           <LoadingSpinner />
         )}
-        {/* {videos ? (
-          <VideoThumbnail postData={videos.data.posts[0]} />
-        ) : (
-          <LoadingSpinner />
-        )} */}
       </div>
     </>
   );

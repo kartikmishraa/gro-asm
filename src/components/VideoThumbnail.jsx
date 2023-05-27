@@ -1,5 +1,3 @@
-import React from "react";
-
 function VideoThumbnail({ postData }) {
   //   const handle = postData.creator.handle;
   //   const name = postData.creator.name;
@@ -7,6 +5,7 @@ function VideoThumbnail({ postData }) {
   const title = postData.submission.title;
   const profilePic = postData.creator.pic;
   const thumbnail = postData.submission.thumbnail;
+  // const mediaUrl = postData.submission.mediaUrl;
   return (
     <>
       <div className="video-thumbnail">
