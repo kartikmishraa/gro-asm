@@ -3,10 +3,12 @@ import { fetchVideo } from "../services/api";
 import { useState, useEffect } from "react";
 import VideoThumbnail from "./VideoThumbnail";
 import LoadingSpinner from "../components/LoadingSpinner";
+import VideoPlayer from "../components/VideoPlayer";
 
 function VideoList() {
   const [videos, setVideos] = useState(null);
   const [page, setPage] = useState(0);
+  const [currVideo, setCurrVideo] = useState(null);
 
   const handlePrev = () => {
     if (page > 0) setPage((page) => page - 1);
@@ -14,6 +16,14 @@ function VideoList() {
 
   const handleNext = () => {
     if (page < 9) setPage((page) => page + 1);
+  };
+
+  const handleThumbnailClick = (video) => {
+    setCurrVideo(video);
+  };
+
+  const handleClose = () => {
+    setCurrVideo(null);
   };
 
   // Fetching page data
@@ -41,10 +51,20 @@ function VideoList() {
       <div className="video-list">
         {videos ? (
           videos.data.posts.map((post) => (
-            <VideoThumbnail postData={post} key={post.postId} />
+            <VideoThumbnail
+              postData={post}
+              key={post.postId}
+              onClick={handleThumbnailClick}
+            />
           ))
         ) : (
           <LoadingSpinner />
+        )}
+        {currVideo && (
+          <div className="video-playback">
+            <VideoPlayer videoUrl={currVideo} />
+            <button onClick={handleClose}>Close</button>
+          </div>
         )}
       </div>
     </>
