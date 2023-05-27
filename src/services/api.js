@@ -2,6 +2,7 @@ import axios from "axios";
 
 const API_URL = "https://internship-service.onrender.com/videos?page=";
 
+// @desc: function to send a GET request at the API endpoint as per the page required
 export const fetchVideo = async (page) => {
   try {
     const PAGE_URL = API_URL + page;

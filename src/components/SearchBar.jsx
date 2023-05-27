@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../resources/images/yt-logo.png";
 import {
   FaBell,
@@ -8,6 +7,8 @@ import {
   FaMicrophone,
 } from "react-icons/fa";
 
+// @component-name: <SearchBar />
+// @desc: search bar for the web app
 function SearchBar() {
   return (
     <div className="searchbar">

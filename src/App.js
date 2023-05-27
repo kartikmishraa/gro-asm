@@ -1,8 +1,7 @@
-import React from "react";
 import SearchBar from "./components/SearchBar";
-import "./index.css";
 import VideoList from "./components/VideoList";
 import SideBar from "./components/SideBar";
+import "./index.css";
 
 function App() {
   return (

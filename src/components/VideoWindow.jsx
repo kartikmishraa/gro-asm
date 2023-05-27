@@ -1,6 +1,7 @@
-import React from "react";
 import VideoPlayer from "../components/VideoPlayer";
 
+// @component-name: <VideoWindow />
+// @desc: The window that opens when clicking on a thumbnail. Displays the video, title, creator name, description and views
 function VideoWindow({ videoData, onClose }) {
   const videoUrl = videoData.submission.mediaUrl;
   const title = videoData.submission.title;
