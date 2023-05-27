@@ -32,7 +32,9 @@ function VideoWindow({ videoData, onClose }) {
           </p>
         </div>
       </div>
-      <button onClick={onClose}>Close</button>
+      <button onClick={onClose} className="margin-bottom">
+        Close
+      </button>
     </div>
   );
 }
