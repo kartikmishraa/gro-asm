@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../yt-logo.png";
+import Logo from "../resources/images/yt-logo.png";
 import {
   FaBell,
   FaVideo,
