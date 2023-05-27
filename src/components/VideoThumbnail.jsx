@@ -5,14 +5,14 @@ function VideoThumbnail({ postData, onClick }) {
   const title = postData.submission.title;
   const profilePic = postData.creator.pic;
   const thumbnail = postData.submission.thumbnail;
-  const mediaUrl = postData.submission.mediaUrl;
+  // const mediaUrl = postData.submission.mediaUrl;
 
   return (
     <>
       <div
         className="video-thumbnail"
         onClick={() => {
-          onClick(mediaUrl);
+          onClick(postData);
         }}
       >
         <img

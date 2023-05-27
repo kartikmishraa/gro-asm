@@ -122,6 +122,35 @@ body {
   animation: spin 1s linear infinite;
 }
 
+/* Video Playback */
+.video-playback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  /* width: 80%; */
+  /* height: 80%; */
+  background-color: #282828;
+  color: white;
+}
+
+.playback-content {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  padding: 10px;
+  border: 2px hidden;
+  border-radius: 10px;
+  background-color: #0c0c0c;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

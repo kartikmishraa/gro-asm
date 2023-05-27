@@ -3,7 +3,7 @@ import { fetchVideo } from "../services/api";
 import { useState, useEffect } from "react";
 import VideoThumbnail from "./VideoThumbnail";
 import LoadingSpinner from "../components/LoadingSpinner";
-import VideoPlayer from "../components/VideoPlayer";
+import VideoWindow from "./VideoWindow";
 
 function VideoList() {
   const [videos, setVideos] = useState(null);
@@ -60,11 +60,9 @@ function VideoList() {
         ) : (
           <LoadingSpinner />
         )}
+
         {currVideo && (
-          <div className="video-playback">
-            <VideoPlayer videoUrl={currVideo} />
-            <button onClick={handleClose}>Close</button>
-          </div>
+          <VideoWindow videoData={currVideo} onClose={handleClose} />
         )}
       </div>
     </>
