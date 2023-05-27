@@ -17,8 +17,12 @@ function VideoWindow({ videoData, onClose }) {
         <hr width={"700px"} />
         <h1 className="thumbnail-title">{title}</h1>
         <div className="flex-row">
-          <img src={profilePic} alt="profile-pic" className="profile-image" />
-          <p>{username}</p>
+          <img
+            src={profilePic}
+            alt="profile-pic"
+            className="profile-image pointer"
+          />
+          <p className="pointer">{username}</p>
         </div>
         {/* <hr /> */}
         <div className="description">

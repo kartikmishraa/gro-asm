@@ -13,8 +13,14 @@ function SearchBar() {
   return (
     <div className="searchbar">
       <div className="flex-row">
-        <img src={Logo} alt="yt-logo" height={50} width={50} />
-        <p>YouTube</p>
+        <img
+          src={Logo}
+          alt="yt-logo"
+          height={50}
+          width={50}
+          className="pointer"
+        />
+        <h3 className="pointer">YouTube</h3>
       </div>
       <div className="flex-row">
         <form>
@@ -25,13 +31,13 @@ function SearchBar() {
             placeholder="Search"
           />
         </form>
-        <FaSearch />
-        <FaMicrophone />
+        <FaSearch className="pointer" />
+        <FaMicrophone className="pointer" />
       </div>
       <div className="flex-row spaced">
-        <FaVideo />
-        <FaBell />
-        <FaUserAlt />
+        <FaVideo className="pointer" />
+        <FaBell className="pointer" />
+        <FaUserAlt className="pointer" />
       </div>
     </div>
   );

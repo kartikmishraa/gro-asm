@@ -38,6 +38,7 @@ body {
 
 .flex-row {
   display: flex;
+  align-items: center;
   padding-left: 10px;
 }
 
@@ -53,6 +54,10 @@ body {
   align-items: center;
   width: 120px;
   margin-right: 3rem;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .pagination {
@@ -79,6 +84,7 @@ button {
   border: 0px hidden;
   border-radius: 15px;
   padding: 10px;
+  cursor: pointer;
 }
 button:hover {
   background-color: white;
@@ -99,6 +105,7 @@ button:active {
   border: 2px solid black;
   border-radius: 15px;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   /* height: 120px; */
   width: 250px;
   margin: 25px;
