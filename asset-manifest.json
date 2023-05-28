@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gro-asm/static/css/main.d5ef00bd.css",
+    "main.js": "/gro-asm/static/js/main.169bd78f.js",
+    "index.html": "/gro-asm/index.html",
+    "main.d5ef00bd.css.map": "/gro-asm/static/css/main.d5ef00bd.css.map",
+    "main.169bd78f.js.map": "/gro-asm/static/js/main.169bd78f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5ef00bd.css",
+    "static/js/main.169bd78f.js"
+  ]
+}
